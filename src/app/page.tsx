@@ -16,7 +16,7 @@ export default function Home() {
         <div className="hero-content container">
           <p className="hero-subtitle label-sm">ESTABLISHED 2020</p>
           <h1 className="hero-title headline-xl">
-            architectures capturing architecture
+            architects capturing architecture
           </h1>
         </div>
         <div className="scroll-indicator">
