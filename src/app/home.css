@@ -1,0 +1,320 @@
+/* Home specific CSS */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 75%;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 26, 15, 0.2);
+  mix-blend-mode: multiply;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-subtitle {
+  color: var(--surface-container-lowest);
+  letter-spacing: 0.4em;
+  margin-bottom: var(--spacing-unit);
+}
+
+.hero-title {
+  color: var(--surface-container-lowest);
+  font-style: italic;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 96px;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.scroll-dot {
+  width: 100%;
+  height: 50%;
+  background-color: var(--surface-container-lowest);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(-100%); }
+  50% { transform: translateY(100%); }
+}
+
+/* Philosophy Section */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .philosophy-grid {
+    grid-template-columns: 5fr 6fr;
+  }
+  .philosophy-img-wrapper {
+    margin-left: 8.33%; /* offset-1 approx */
+  }
+}
+
+.philosophy-label {
+  color: var(--on-primary-container);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.philosophy-heading {
+  color: var(--primary);
+  margin-bottom: 32px;
+}
+
+.philosophy-desc {
+  color: var(--on-surface-variant);
+  max-width: 28rem;
+}
+
+.philosophy-subdesc {
+  margin-top: 32px;
+  color: var(--outline);
+}
+
+.philosophy-btn-wrapper {
+  margin-top: 48px;
+}
+
+.philosophy-img-container {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background-color: var(--surface-container);
+  overflow: hidden;
+}
+
+.philosophy-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.philosophy-caption {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  color: var(--on-surface);
+  background-color: rgba(251, 249, 244, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 16px 24px;
+}
+
+/* Featured Section */
+.featured {
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+}
+
+.featured-label {
+  color: var(--primary-fixed-dim);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.featured-heading {
+  color: var(--surface-container-lowest);
+}
+
+.featured-count {
+  color: var(--surface-container-lowest);
+  font-style: italic;
+}
+
+.featured-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.featured-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(75%);
+  transition: transform 1s ease;
+}
+
+.featured-banner:hover .featured-banner-img {
+  transform: scale(1.05);
+}
+
+.featured-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(5, 26, 15, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.featured-banner:hover .featured-banner-overlay {
+  opacity: 1;
+}
+
+.featured-btn {
+  color: var(--surface-container-lowest);
+  border: 1px solid var(--surface-container-lowest);
+  padding: 16px 32px;
+}
+
+.featured-meta {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+}
+
+@media (min-width: 768px) {
+  .featured-meta {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.meta-item {
+  color: var(--primary-fixed-dim);
+  border-top: 1px solid rgba(115, 121, 115, 0.3);
+  padding-top: 32px;
+}
+
+.meta-item .label-sm {
+  margin-bottom: 8px;
+}
+
+/* Services */
+.services-heading {
+  color: var(--primary);
+  margin-bottom: 48px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 66.666%;
+    margin: 0 auto;
+  }
+}
+
+.service-item h4 {
+  color: var(--on-tertiary-fixed-variant);
+  margin-bottom: 16px;
+}
+
+.service-item p {
+  color: var(--on-surface-variant);
+}
+
+/* Gallery Teaser */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  height: 800px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.7s ease;
+}
+
+.item-1 {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+@media (min-width: 768px) { .item-1 { grid-column: span 8; } }
+
+.item-1 img {
+  filter: grayscale(100%);
+}
+.item-1:hover img {
+  filter: grayscale(0%);
+}
+
+.item-2 {
+  grid-column: span 12;
+  grid-row: span 2;
+}
+@media (min-width: 768px) { .item-2 { grid-column: span 4; } }
+
+.item-3 {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+@media (min-width: 768px) { .item-3 { grid-column: span 4; } }
+
+.item-4 {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+@media (min-width: 768px) { .item-4 { grid-column: span 4; } }
+.item-4 img { filter: grayscale(100%); }

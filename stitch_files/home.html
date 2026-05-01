@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#f0eee9",
+                    "on-tertiary-container": "#939292",
+                    "primary-container": "#1a2f23",
+                    "surface-container-low": "#f5f3ee",
+                    "tertiary-container": "#2b2b2b",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "on-primary-fixed-variant": "#364c3e",
+                    "surface-container-high": "#eae8e3",
+                    "secondary-container": "#e4e3d7",
+                    "surface-tint": "#4d6355",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "secondary-fixed-dim": "#c8c7bc",
+                    "secondary-fixed": "#e4e3d7",
+                    "inverse-surface": "#30312e",
+                    "surface-container-highest": "#e4e2dd",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#161717",
+                    "primary": "#051a0f",
+                    "on-secondary-container": "#65655c",
+                    "inverse-primary": "#b4ccbb",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#809787",
+                    "secondary": "#5e5f56",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1b1c19",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c2c8c2",
+                    "surface-variant": "#e4e2dd",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-background": "#1b1c19",
+                    "outline": "#737973",
+                    "on-surface-variant": "#424843",
+                    "surface-dim": "#dbdad5",
+                    "inverse-on-surface": "#f2f1ec",
+                    "primary-fixed-dim": "#b4ccbb",
+                    "surface-bright": "#fbf9f4",
+                    "on-secondary-fixed-variant": "#47473f",
+                    "background": "#fbf9f4",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#0a2014",
+                    "on-secondary-fixed": "#1b1c15",
+                    "surface": "#fbf9f4",
+                    "primary-fixed": "#d0e9d6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "section-gap": "128px",
+                    "container-max": "1440px",
+                    "margin-edge": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-xl": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "headline-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f4; /* surface-bright */
+            -webkit-font-smoothing: antialiased;
+        }
+        .framed-grid {
+            max-width: 1440px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-sm border-b border-stone-200/20 dark:border-stone-800/20 flex justify-between items-center px-16 py-8 w-full">
+<div class="text-2xl font-serif tracking-[0.2em] uppercase dark:text-stone-100 text-primary">MARC FRAMES</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="dark:text-stone-100 border-b border-stone-900 dark:border-stone-100 pb-1 font-sans uppercase tracking-widest text-xs transition-colors duration-500 text-primary" href="#" style="border-color: #1A2F23;">Portfolio</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500" href="#">Studio</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500" href="#">Exhibitions</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4 text-stone-900 dark:text-stone-100 font-serif text-lg tracking-tight">
+<span>Menu</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-90 object-bottom" data-alt="A cinematic architectural interior showing a woman at a marble table under elegant designer lighting." src="https://lh3.googleusercontent.com/aida/ADBb0ugikXUeUe-9NG5yOvzRdhQh0MTeYhdDXbtFw2BrLyz-EJmV6cTCAQYtAXNGiYKnmLEXxEenH_6wMJizxP3-H-a09VzVDvOoPYooeE9mqp7qYbqERE6WTNb0y1Ea5WZlUd6ZZDdfDNK1LUvNp8kd9fB8VXTud4bEIbjmt8fwQLErBkC7RqNAgqSf2EMWdwAPiib8j89tBie1PuJOgK4XeIcqbkD4jbPbWjJwptVr9ggDKL0_xD3UflWB_NoCKZ4619entnZPVJHx"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center framed-grid">
+<p class="font-label-sm text-surface-container-lowest uppercase tracking-[0.4em] mb-unit">ESTABLISHED MMXXIV</p>
+<h1 class="font-headline-xl text-surface-container-lowest italic lowercase">
+                architectures capturing architecture
+            </h1>
+</div>
+<div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+<div class="w-[1px] h-24 bg-surface-container-lowest/30 overflow-hidden">
+<div class="w-full h-1/2 bg-surface-container-lowest animate-bounce"></div>
+</div>
+</div>
+</section>
+<!-- Studio Philosophy Section -->
+<section class="framed-grid py-section-gap">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-5">
+<span class="font-label-sm text-on-primary-container mb-4 block">THE PHILOSOPHY</span>
+<h2 class="font-headline-lg text-primary mb-8">Structural Silence</h2>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                    Our practice is defined by the intersection of light, shadow, and the stillness between walls. We do not just document buildings; we capture the intent of the architect.
+                </p>
+<p class="mt-8 font-body-md text-outline">
+                    Based in Zurich, serving international design firms with a focus on editorial and archival excellence.
+                </p>
+<div class="mt-12">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-none font-label-sm uppercase tracking-widest hover:bg-on-primary-fixed-variant transition-colors duration-500">
+                        Read the Journal
+                    </button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-offset-1 mt-12 md:mt-0">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Interior of a modern concrete building with soft morning light filtering through a skylight onto a minimalist staircase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYrqHu-P8NPqgjOUf-SsnHBa6Axj9JpAZyFqp4WOJYhZBGDAA_ATWiAkvcQGpKxEIJEKv87DXu74cbMUFAKCx7CgwfqM1yEBAmATJ_3C2Y-8BhNfn5qICO91Wqi1LMYED1YFq2QJhaj1cTsIcgTok_h9xd0_HpsI82PgjcAqKWdOWnB7vXdRaBuoxKFEVMYYP4WcYN7ksMRAP5_5whx_M3P7Gl1nkA8hjIhbzGELHAwyx8uoZCDMbmROD4Gv3Yyyy4dMSTHt-bC50"/>
+<div class="absolute bottom-8 right-8 text-on-surface bg-surface-bright/80 backdrop-blur px-6 py-4">
+<p class="font-label-sm">CASE STUDY 01</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Project Teaser -->
+<section class="bg-primary py-section-gap overflow-hidden">
+<div class="framed-grid">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-sm text-primary-fixed-dim block mb-4">FEATURED ARCHIVE</span>
+<h2 class="font-headline-lg text-surface-container-lowest">Pavilion of Shadows</h2>
+</div>
+<div class="text-surface-container-lowest font-headline-md italic">
+                    01 / 12
+                </div>
+</div>
+<div class="relative w-full aspect-[21/9] group cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-1000" data-alt="Wide panoramic shot of a minimalist wooden and glass pavilion in a dense foggy forest during twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHX7Z57M0QI1u8eluoPlFt0kDIurUYjSLi2UV9WJV8iF8fuVTftDELjRzfn6ekcdfG0NUnpE2fdagq5GxQ_f-llNAqUjFw9CKw7J0z7m535yB5q0DpEsHBMgJLou5uvY283OzwXxG7tes_D36Gk8hSm1GtTxoxvuPmPJVGkYgR9D6pF8kW8P878CjLL0HUWxzZcFHepYqyXWNN7NnJ5Nl5-fxqBGXG7nl19De06cPTaeb8suybjwYLBV8yOEuJ7YMYvUr8yrV4C3I"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-primary/40">
+<span class="text-surface-container-lowest font-label-sm border border-surface-container-lowest px-8 py-4">View Collection</span>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 text-primary-fixed-dim border-t border-outline/30 pt-8">
+<p class="font-label-sm mb-2">LOCATION</p>
+<p class="font-body-md">Kyoto, Japan</p>
+</div>
+<div class="col-span-12 md:col-span-4 text-primary-fixed-dim border-t border-outline/30 pt-8">
+<p class="font-label-sm mb-2">ARCHITECT</p>
+<p class="font-body-md">S. Hara &amp; Associates</p>
+</div>
+<div class="col-span-12 md:col-span-4 text-primary-fixed-dim border-t border-outline/30 pt-8">
+<p class="font-label-sm mb-2">YEAR</p>
+<p class="font-body-md">2023</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services / Studio Detail -->
+<section class="framed-grid py-section-gap">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-8 md:col-start-3 text-center">
+<h3 class="font-headline-lg text-primary mb-12">The Frame is the Medium.</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+<div class="space-y-4">
+<h4 class="font-label-sm uppercase text-on-tertiary-fixed-variant">Editorial Photography</h4>
+<p class="font-body-md text-on-surface-variant">Capturing the life of buildings for major global publications and digital journals.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm uppercase text-on-tertiary-fixed-variant">Film Documentation</h4>
+<p class="font-body-md text-on-surface-variant">Motion sequences that reveal the spatial rhythm and temporal shifts of architecture.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm uppercase text-on-tertiary-fixed-variant">Archival Books</h4>
+<p class="font-body-md text-on-surface-variant">Custom curated print volumes documenting the full evolution of landmark projects.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Gallery Teaser -->
+<section class="framed-grid pb-section-gap">
+<div class="grid grid-cols-12 grid-rows-2 gap-4 h-[800px]">
+<div class="col-span-12 md:col-span-8 row-span-1 overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" data-alt="Abstract architectural detail of white steel beams against a deep blue sky with sharp geometric intersections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2DJ2aMVgIWt_gCISAdD2JOejoo3WmP8XUX5hTsNq1A1MX4tZC4L5jygnSUgKqpCBAur_erNJWg2YpgVPXVNMzyC5xyW4aDcanKvYGG_Udn-IP8Cl_C9vJaVBOo7Q5lXqZv7dWqIhFAFcXsyweLAN7tJcZirI-X-Hqtfw0ptYZGOn6QXukpdi1tsqfYT56mu1VNnQmXpfoy4E1SxnJS3-ADCznSavRucPJ8BLPMOoEjxNsC37VWt-JjMeAuWUJoPgYKCONeM0p72s"/>
+</div>
+<div class="col-span-12 md:col-span-4 row-span-2 overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-all duration-700" data-alt="Extreme close-up of textured concrete wall with rhythmic vertical ridges and soft directional shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwMHZXTAZOBXMu48H5vtA91BMzB-pt6gla8ugS5v6X2Fy8zMqvw9QJvGQIPS9gE9PsF5vKvy-N5MwMzY7--IIGw15RntithK2-lPMnB5wAJI4IwBnhZ90lzNbHVlUKJQ9_ZYCYuGZ492L3vyQoTh9aOzFmamy1SS9334tjtMKyDAFD1d1Ebfjnb7Ll-_hB8FKxYOw-T4tvNrqAVuGjgGK1cGWa7EcFG04W2pwzF2Cw5XvNWFEg4AqNupa-vyKV0noefNYx3SsENSE"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="col-span-12 md:col-span-4 row-span-1 overflow-hidden relative group">
+<img class="w-full h-full object-cover brightness-90" data-alt="Clean minimal corner of a contemporary room with a single designer chair and a large circular window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtgYy3Fe-1VgZD_3A4ZJaBRgX5Yex7mm2p5Os1KTDsgBziFLY_tZ-VkNjr0Qn6WxfzA14WbmwMTsEE2THaBWhU7xiQadcWbOOYYW0ixZIQvZXIbArAK6i1AhoY1WImb_ZqfNWU4Ck_eMuu6TPj7GzVyYHxzM8xj3hpDhyc-EjRbTbMh16eBpcix3z0me9qoLolcRNE1r8SLDkCrIyROhSBp5eGEj75ZsSYF9mvpBGNlz_V5UfJncMarUu7Z2w708_p2W5ojRTCWMg"/>
+</div>
+<div class="col-span-12 md:col-span-4 row-span-1 overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale" data-alt="Modern house facade at night with warm interior lighting glowing through large rectangular windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzEfI7p5ZhGPW7LreRQD2WsmO_rVDIcb2D42yCY-RZI5a8eOIbGqhUuRfUCwSxiyXkBr0PHb-TGv8EVNMQn9zpcKmrESCxQUP8ZRLPYeCDBGcEVOtfohnU634n4C7EEJwCVKS8gGDuTvfB3uNmI2s8ebd_-3jsRtiwoQjKinHF0eT7gXlG3VXmtKRzcbbsuJ1n-Z-WXL2lLP0VC0jqwjaBTpiFIHDSNrYXMBkNil0ShJ8Kl7MtVvSEw9MXxMuTIRW3RwR-fjMrnTM"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 w-full border-t border-stone-200 dark:border-stone-800 border-t border-stone-100 dark:border-stone-900">
+<div class="max-w-7xl mx-auto px-16 py-24 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-serif italic text-lg text-stone-900 dark:text-stone-100">
+                Marc Frames
+            </div>
+<div class="flex gap-12">
+<a class="text-stone-400 dark:text-stone-600 font-sans text-[10px] uppercase tracking-[0.3em] hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#">Instagram</a>
+<a class="text-stone-400 dark:text-stone-600 font-sans text-[10px] uppercase tracking-[0.3em] hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#">LinkedIn</a>
+<a class="text-stone-400 dark:text-stone-600 font-sans text-[10px] uppercase tracking-[0.3em] hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#">Journal</a>
+<a class="text-stone-400 dark:text-stone-600 font-sans text-[10px] uppercase tracking-[0.3em] hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#">Contact</a>
+</div>
+<div class="text-stone-400 dark:text-stone-600 font-sans text-[10px] uppercase tracking-[0.3em]">
+                © 2024 MARC FRAMES. ARCHITECTURES CAPTURING ARCHITECTURE.
+            </div>
+</div>
+</footer>
+</body></html>
