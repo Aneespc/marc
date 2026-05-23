@@ -1,3 +1,3 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-check out the [website](marcframes.vercel.appp)
+check out the [website](https://marcframes.vercel.app/)
